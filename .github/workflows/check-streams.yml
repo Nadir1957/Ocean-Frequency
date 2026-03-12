@@ -1,0 +1,9 @@
+Ocean-Frequency/
+├── index.html
+├── 404.html
+├── package.json
+├── scripts/
+│   └── check-streams.js     ← fichier 3 (voir plus bas)
+└── .github/                  ← dossier caché (commence par un point)
+    └── workflows/            ← sous-dossier obligatoire
+        └── check-streams.yml ← ici
