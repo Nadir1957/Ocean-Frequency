@@ -367,6 +367,7 @@ button{font-family:inherit;}
 .fc-se{background:linear-gradient(135deg,#0A1520,#0A2535);}
 .fc-pt{background:linear-gradient(135deg,#0A1A0A,#1A3020);}
 .fc-us{background:linear-gradient(135deg,#0E0E25,#1A1A40);}
+.fc-ca{background:linear-gradient(135deg,#1A0A0A,#3D1010);}
 .fc-au{background:linear-gradient(135deg,#0A1520,#152035);}
 .fc-nz{background:linear-gradient(135deg,#0A1020,#101A30);}
 
@@ -735,11 +736,6 @@ ul#stList{list-style:none;padding:0;margin:0;}
   .ticker-inner,#npTrack .meta-inner{animation:none !important;}
   .waveform .w-b,.eq-b{animation:none !important;height:8px !important;}
 }
-
-
-
-}
-}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--surface2);border-radius:3px;}
@@ -977,13 +973,19 @@ ul#stList{list-style:none;padding:0;margin:0;}
         <div class="fc-play-btn" aria-hidden="true">▶</div>
       </div>
     </button>
-    <button class="feat-card" id="fc12" aria-label="Jazz 91.1 — Australia">
+    <button class="feat-card" id="fc12" aria-label="CKUA Radio — Canada">
+      <div class="fc-bg fc-ca"><div class="fc-teal-overlay"></div>
+        <div class="fc-meta"><div class="fc-flag" aria-hidden="true"><img src="https://flagcdn.com/w40/ca.png" srcset="https://flagcdn.com/w80/ca.png 2x" alt="Canada" loading="lazy"></div><div class="fc-country">Canada</div><div class="fc-name">CKUA Radio</div></div>
+        <div class="fc-play-btn" aria-hidden="true">▶</div>
+      </div>
+    </button>
+    <button class="feat-card" id="fc13" aria-label="Jazz 91.1 — Australia">
       <div class="fc-bg fc-au"><div class="fc-teal-overlay"></div>
         <div class="fc-meta"><div class="fc-flag" aria-hidden="true"><img src="https://flagcdn.com/w40/au.png" srcset="https://flagcdn.com/w80/au.png 2x" alt="Australia" loading="lazy"></div><div class="fc-country">Australia</div><div class="fc-name">Jazz 91.1</div></div>
         <div class="fc-play-btn" aria-hidden="true">▶</div>
       </div>
     </button>
-    <button class="feat-card" id="fc13" aria-label="RNZ Concert — New Zealand">
+    <button class="feat-card" id="fc14" aria-label="RNZ Concert — New Zealand">
       <div class="fc-bg fc-nz"><div class="fc-teal-overlay"></div>
         <div class="fc-meta"><div class="fc-flag" aria-hidden="true"><img src="https://flagcdn.com/w40/nz.png" srcset="https://flagcdn.com/w80/nz.png 2x" alt="New Zealand" loading="lazy"></div><div class="fc-country">New Zealand</div><div class="fc-name">RNZ Concert</div></div>
         <div class="fc-play-btn" aria-hidden="true">▶</div>
@@ -1844,7 +1846,16 @@ const CURATED = [
    url:'https://media-ice.musicradio.com/MagicMP3',                  favicon:'https://www.magicradio.co.uk/favicon.ico'},
 
 // ── AUSTRALIA (12) — flux HLS ABC + Icecast vérifiés ────────────────────────
-  {id:'c-au-01',name:'ABC Jazz',                 co:'AU',genre:'jazz',   tags:'jazz,blues,soul',
+  
+  // ── Canada ─────────────────────────────────────────────────────
+  {id:'c-ca-01',name:'CKUA Radio',        url:'https://stream.ckua.com/ckua',                  co:'CA', genre:'jazz',        type:'🎵'},
+  {id:'c-ca-02',name:'Jazz FM Toronto',   url:'https://jazz919.leanstream.co/CJRTFM-MP3',      co:'CA', genre:'jazz',        type:'🎵'},
+  {id:'c-ca-03',name:'CBC Music Jazz',    url:'https://cbcmusicjazz.cbcrc.ca/audio/cbcmusicjazz.mp3', co:'CA', genre:'jazz', type:'🏛️'},
+  {id:'c-ca-04',name:'CJRT Jazz 91.1',    url:'https://jazz919.leanstream.co/CJRTFM',           co:'CA', genre:'jazz',        type:'🎵'},
+  {id:'c-ca-05',name:'Radio-Canada Ici Musique', url:'https://ici-musique.cbcrc.ca/audio/icimusique.mp3', co:'CA', genre:'classical', type:'🏛️'},
+  {id:'c-ca-06',name:'CHUO Ottawa',       url:'https://chuo.fm/stream/;stream.mp3',             co:'CA', genre:'community',   type:'📍'},
+  {id:'c-ca-07',name:'CKUT Montreal',     url:'https://stream.ckut.ca/900',                     co:'CA', genre:'community',   type:'📍'},
+{id:'c-au-01',name:'ABC Jazz',                 co:'AU',genre:'jazz',   tags:'jazz,blues,soul',
    url:'https://live-radio01.mediahubaustralia.com/2JZZ/mp3/',   favicon:'https://www.abc.net.au/cm/rimage/10538004-1x1-large.jpg?v=2'},
   {id:'c-au-02',name:'ABC Classic',              co:'AU',genre:'classical',tags:'classical,opera,symphony',
    url:'https://live-radio01.mediahubaustralia.com/2FBIaac/',    favicon:'https://www.abc.net.au/cm/rimage/10538004-1x1-large.jpg?v=2'},
@@ -2154,6 +2165,7 @@ function setupFeatured(){
     {co:'SE',keywords:['jazz fm','jazz','sr']},
     {co:'PT',keywords:['antena 2','jazz','rtp']},
     {co:'US',keywords:['wbgo','kcsm','jazz24','kplu','kjazz']},
+    {co:'CA',keywords:['ckua','jazz fm','cbc jazz','jazz']},
     {co:'AU',keywords:['jazz','abc jazz','3mbs']},
     {co:'NZ',keywords:['rnz concert','radio new zealand','jazz']},
   ];
